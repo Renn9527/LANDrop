@@ -1,6 +1,5 @@
 # LANDrop 2.0 Implementation Plan
 
-> 对应 PRD：LANDrop 2.0 重构 PRD  
 > 目标：将 LANDrop 从单文件 Web Demo 重构为可维护、轻量、成熟的局域网传输工具  
 > 执行方式：按 Phase 顺序完成，不允许跳过基础阶段直接重写核心协议
 
@@ -197,18 +196,9 @@ Known Baseline Issue
 
 ```text
 docs/
-├── PRD.md
 ├── IMPLEMENTATION.md
 └── ARCHITECTURE.md
 ```
-
-其中：
-
-```text
-PRD.md
-```
-
-保存完整产品 PRD。
 
 当前文件保存为：
 
@@ -854,7 +844,7 @@ components/Header.tsx
 桌面：
 
 ```text
-LANDrop                  Rowan-PC ●     Settings     More
+LANDrop                  LANDrop-PC ●     Settings     More
 ```
 
 禁止显示永久 IP 卡片。
@@ -866,16 +856,16 @@ LANDrop                  Rowan-PC ●     Settings     More
 点击：
 
 ```text
-Rowan-PC
+LANDrop-PC
 ```
 
 弹出：
 
 ```text
-Rowan-PC
+LANDrop-PC
 
 Windows
-192.168.1.18:53217
+192.168.1.10:53217
 
 ● 局域网可访问
 
@@ -957,7 +947,7 @@ components/SendPanel.tsx
 顶部：
 
 ```text
-发送到 Rowan-PC
+发送到 LANDrop-PC
 ```
 
 Tabs：
@@ -1338,8 +1328,8 @@ DeviceRow.tsx
 显示：
 
 ```text
-● MacBook Air
-  192.168.1.32
+● macOS 设备
+  192.168.1.20
 ```
 
 IP 使用次级字体。
@@ -1371,7 +1361,7 @@ name
 例如：
 
 ```text
-http://192.168.1.32:53217
+http://192.168.1.20:53217
 ```
 
 可以：
@@ -1425,8 +1415,8 @@ ManualConnectDialog.tsx
 支持：
 
 ```text
-192.168.1.20:53217
-http://192.168.1.20:53217
+192.168.1.10:53217
+http://192.168.1.10:53217
 https://...
 hostname.local:53217
 ```
@@ -1494,11 +1484,11 @@ Scan Card
 显示：
 
 ```text
-连接 Rowan-PC
+连接 LANDrop-PC
 
 QR
 
-192.168.1.18:53217
+192.168.1.10:53217
 
 复制地址
 ```
@@ -1931,7 +1921,7 @@ URL
 # 16.2 Mobile Header
 
 ```text
-LANDrop          Rowan-PC
+LANDrop          LANDrop-PC
 ```
 
 ---
